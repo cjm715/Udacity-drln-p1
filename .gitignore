@@ -6,3 +6,8 @@ VisualBanana.app
 *.log
 checkpoint.pth
 *.p
+*.aux
+*.bbl
+*.blg
+*.gz
+*.pdf
