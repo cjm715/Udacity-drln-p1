@@ -5,3 +5,4 @@ VisualBanana.app
 .envrc
 *.log
 checkpoint.pth
+*.p
