@@ -11,3 +11,4 @@ checkpoint.pth
 *.blg
 *.gz
 *.pdf
+*.mov
