@@ -12,7 +12,7 @@ import os
 
 dirpath = os.path.dirname(os.path.abspath(__file__))
 
-env = UnityEnvironment(file_name=dirpath + "/../Banana.app")
+env = UnityEnvironment(file_name=dirpath + "/../env/Banana.app")
 
 # get the default brain
 brain_name = env.brain_names[0]
