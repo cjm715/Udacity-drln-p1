@@ -8,8 +8,11 @@ from collections import deque
 import matplotlib.pyplot as plt
 from dqn_agent import Agent
 import pickle
+import os
 
-env = UnityEnvironment(file_name="src/Banana.app")
+dirpath = os.path.dirname(os.path.abspath(__file__))
+
+env = UnityEnvironment(file_name=dirpath + "/Banana.app")
 
 # get the default brain
 brain_name = env.brain_names[0]
@@ -79,10 +82,11 @@ def dqn(n_episodes=2000, max_t=1000, eps_start=0.9, eps_end=0.01, eps_decay=0.95
         if i_episode % 100 == 0:
             print('\rEpisode {}\tAverage Score: {:.2f} \t Epsilon: {}'.format(
                 i_episode, np.mean(scores_window), eps))
-        if np.mean(scores_window) >= 5.0:
+        if np.mean(scores_window) >= 1.0:
             print('\nEnvironment solved in {:d} episodes!\tAverage Score: {:.2f}'.format(
                 i_episode, np.mean(scores_window)))
-            torch.save(agent.qnetwork_local.state_dict(), 'checkpoint.pth')
+            torch.save(agent.qnetwork_local.state_dict(),
+                       dirpath + '/checkpoint.pth')
             break
     return scores
 
@@ -90,7 +94,7 @@ def dqn(n_episodes=2000, max_t=1000, eps_start=0.9, eps_end=0.01, eps_decay=0.95
 scores = dqn()
 
 
-with open(r"scores_dqn.p", "wb") as output_file:
+with open(dirpath + "/scores_dqn.p", "wb") as output_file:
     pickle.dump(scores, output_file)
 
 # plot the scores
@@ -103,5 +107,6 @@ plt.plot(np.arange(len(scores)), scores)
 plt.grid('on')
 plt.ylabel('Score')
 plt.xlabel('Episode')
-plt.savefig('../report/images/scores_dqn.png', format='png', dpi=300)
+plt.savefig(dirpath + '/../report/images/scores_dqn.png',
+            format='png', dpi=300)
 plt.show()
