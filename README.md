@@ -12,5 +12,5 @@ see `report/project.pdf`.
 
 ## Usage
 
-Clone repo and run `python src/dqn_train.py` from root. 
+First, clone repo. From root, run `python src/dqn_train.py` to train. After training is done, run `python src/dqn_test.py` to see the trained agent.
 
