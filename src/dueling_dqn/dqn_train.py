@@ -107,6 +107,6 @@ plt.plot(np.arange(len(scores)), scores)
 plt.grid('on')
 plt.ylabel('Score')
 plt.xlabel('Episode')
-plt.savefig(dirpath + '/../../report/images/scores_dqn.png',
+plt.savefig(dirpath + '/../../report/images/scores_dueling_dqn.png',
             format='png', dpi=300)
 plt.show()

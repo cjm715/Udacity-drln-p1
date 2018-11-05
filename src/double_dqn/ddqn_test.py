@@ -7,12 +7,12 @@ import torch
 import numpy as np
 from collections import deque
 import matplotlib.pyplot as plt
-from dqn_agent import Agent
+from ddqn_agent import Agent
 import os
 
 dirpath = os.path.dirname(os.path.abspath(__file__))
 
-env = UnityEnvironment(file_name=dirpath + "/../Banana.app")
+env = UnityEnvironment(file_name=dirpath + "/../env/Banana.app")
 
 max_t = 1000
 # get the default brain
