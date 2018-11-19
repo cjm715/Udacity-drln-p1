@@ -7,7 +7,7 @@ This project was done as part of the Udacity Deep Reinforcement Nanodegree.
 
 This project explores Q-learning on the Unity Banana environment. For full details,
 see `report/project.pdf`.
-
+<!-- 
 ## Project Details
 
 ## Getting Started
@@ -16,7 +16,7 @@ First, clone repo.
 
 This code base is in python 3.
 
-To install dependencies, 
+To install dependencies,  -->
 
 ## Instructions
 
