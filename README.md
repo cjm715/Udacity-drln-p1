@@ -6,7 +6,7 @@
 This project was done as part of the Udacity Deep Reinforcement Nanodegree. Some of the text in this README is adapted from the original [Udacity Deep Reinforcement Learning Nanodegree repo](https://github.com/udacity/deep-reinforcement-learning).
 
 This project explores Q-learning on the Unity Banana environment. For full details,
-see `report/project.pdf`.
+see `Report.pdf`.
 
 
 ## Project details
